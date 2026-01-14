@@ -3,52 +3,6 @@ Marlon Batalha 👨‍💻
 
 Desenvolvedor com foco em aplicações web, back-end, cloud e automações, atuando principalmente com o ecossistema JavaScript/TypeScript. Tenho experiência na criação de soluções escaláveis, integração de sistemas e automação de processos utilizando workflows avançados.
 
-🧠 Stack Técnica
-
-Escala de conhecimento:
-Muito bom > Médio > Bom
-
-Front-end
-
-HTML — Muito bom
-
-CSS — Médio
-
-JavaScript — Médio
-
-React — Bom
-
-Next.js — Bom
-
-Tailwind CSS — Médio
-
-Back-end
-
-Node.js — Bom
-
-TypeScript — Bom
-
-ASP.NET — Bom
-
-Banco de Dados
-
-PostgreSQL — Bom
-
-Prisma ORM — Médio
-
-Backend as a Service
-
-Supabase — Médio
-
-Cloud & Deploy
-
-Azure — Bom
-
-Vercel — Médio
-
-Automação
-
-n8n — Muito bom
 
 Criação de workflows para automação de processos, integrações entre APIs, bancos de dados, formulários, sistemas internos e plataformas de comunicação.
 
