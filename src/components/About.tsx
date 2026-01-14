@@ -29,7 +29,7 @@ export default function About() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
+        ease: [0.25, 0.1, 0.25, 1] as const,
       },
     },
   };
@@ -108,7 +108,7 @@ export default function About() {
                   transition={{ 
                     delay: 0.3 + index * 0.1, 
                     duration: 0.5,
-                    ease: [0.25, 0.1, 0.25, 1]
+                    ease: [0.25, 0.1, 0.25, 1] as const
                   }}
                 >
                   {text}
@@ -162,7 +162,7 @@ export default function About() {
                   transition={{ 
                     delay: 0.4 + index * 0.15, 
                     duration: 0.5,
-                    ease: [0.25, 0.1, 0.25, 1]
+                    ease: [0.25, 0.1, 0.25, 1] as const
                   }}
                   whileHover={{ 
                     y: -4,
