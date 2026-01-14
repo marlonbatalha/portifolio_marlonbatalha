@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { SlideReveal } from '../ui/SlideReveal';
 
 // Importando ícones oficiais
 import { 
@@ -138,42 +138,6 @@ const technologies: Technology[] = [
 ];
 
 export default function Skills() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.22, 1, 0.36, 1] as const,
-      },
-    },
-  };
-
-  const cardHoverVariants = {
-    hover: {
-      y: -8,
-      transition: {
-        duration: 0.3,
-        ease: [0.22, 1, 0.36, 1] as const,
-      },
-    },
-  };
-
   const iconVariants = {
     hover: {
       scale: 1.1,
@@ -185,14 +149,16 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="section bg-[var(--color-bg-secondary)] border-t border-[var(--color-border-secondary)]" ref={ref}>
+    <section id="skills" className="section bg-[var(--color-bg-secondary)] border-t border-[var(--color-border-secondary)]">
       <div className="container">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-        >
-          <motion.div className="text-center mb-[var(--spacing-3xl)]" variants={itemVariants}>
+        <div>
+          <motion.div 
+            className="text-center mb-[var(--spacing-3xl)]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="mb-[var(--spacing-sm)]">Conhecimentos e Tecnologias</h2>
             <p className="text-lg text-[var(--color-text-tertiary)] max-w-[600px] mx-auto">
               Linguagens, Frameworks, Ferramentas, Libraries e mais
@@ -204,16 +170,22 @@ export default function Skills() {
               const IconComponent = tech.Icon;
               
               return (
-                <motion.div
-                  key={tech.name}
-                  className="relative h-full min-h-[180px] max-md:min-h-[160px]"
-                  variants={itemVariants}
-                  whileHover="hover"
-                  custom={index}
-                >
+                <div key={tech.name} className="relative h-full min-h-[180px] max-md:min-h-[160px]">
+                  <SlideReveal delay={index * 0.05} className="h-full">
                   <motion.div
                     className="relative h-full glass-card p-[var(--spacing-xl)] flex flex-col gap-[var(--spacing-md)] max-md:p-[var(--spacing-lg)] transition-all duration-300"
-                    variants={cardHoverVariants}
+                    initial="initial"
+                    whileHover="hover"
+                    variants={{
+                      initial: { y: 0 },
+                      hover: { 
+                        y: -8,
+                        transition: {
+                          duration: 0.3,
+                          ease: [0.22, 1, 0.36, 1]
+                        }
+                      }
+                    }}
                     style={{
                       background: `linear-gradient(135deg, ${tech.color}08 0%, ${tech.color}03 100%)`,
                       boxShadow: `0 0 0 1px ${tech.color}15, 0 4px 12px ${tech.color}10`,
@@ -252,11 +224,12 @@ export default function Skills() {
                       <p className="text-sm text-[var(--color-text-tertiary)] leading-[1.5] m-0 mt-[var(--spacing-xs)] max-md:text-[0.8125rem]">{tech.description}</p>
                     </div>
                   </motion.div>
-                </motion.div>
+                  </SlideReveal>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
