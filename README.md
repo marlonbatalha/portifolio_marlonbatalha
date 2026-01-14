@@ -1,36 +1,215 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfólio Profissional - Marlon Batalha
 
-## Getting Started
+Portfólio moderno e minimalista desenvolvido com Next.js 16, React 19, TypeScript e Framer Motion.
 
-First, run the development server:
+## ✨ Características
 
+- 🎨 **Design Minimalista** - Interface limpa e profissional
+- 🌑 **Tema Escuro** - Paleta de cores neutras e sofisticadas (preto, azul escuro, slate)
+- ✨ **Animações Suaves** - Powered by Framer Motion
+- 📱 **Totalmente Responsivo** - Perfeito em todos os dispositivos
+- ⚡ **Performance Otimizada** - Carregamento rápido e eficiente
+- 🎯 **SEO Otimizado** - Metadata completa
+- 🔥 **Scroll Animations** - Animações ao rolar a página
+- 💼 **Seções Completas** - Hero, Sobre, Projetos, Habilidades e Contato
+
+## 🛠️ Tecnologias
+
+- **Framework:** Next.js 16.1.1
+- **UI Library:** React 19.2.3
+- **Linguagem:** TypeScript
+- **Animações:** Framer Motion 12.26.2
+- **Estilização:** CSS Modules
+- **Deploy:** Vercel
+
+## 🎨 Design System
+
+### Paleta de Cores
+- **Background:** `#000000` (Preto puro)
+- **Secondary:** `#0a0a0a` (Preto suave)
+- **Tertiary:** `#171717` (Cinza escuro)
+- **Accent:** `#3b82f6` (Azul profissional)
+- **Text Primary:** `#fafafa` (Branco suave)
+- **Text Secondary:** `#d4d4d4` (Cinza claro)
+
+### Tipografia
+- **Display:** Space Grotesk (Títulos)
+- **Body:** Inter (Texto)
+
+## 🚀 Como Executar Localmente
+
+1. Clone o repositório:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <seu-repositorio>
+cd portifolio_marlonbatalha
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instale as dependências:
+```bash
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Execute o servidor de desenvolvimento:
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-## Learn More
+## 📦 Build para Produção
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm build
+pnpm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Deploy na Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Opção 1: Via GitHub (Recomendado)
 
-## Deploy on Vercel
+1. Faça push do código para o GitHub
+2. Acesse [vercel.com](https://vercel.com)
+3. Clique em "New Project"
+4. Importe seu repositório do GitHub
+5. A Vercel detectará automaticamente as configurações do Next.js
+6. Clique em "Deploy"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Opção 2: Via Vercel CLI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm i -g vercel
+vercel
+```
+
+Veja o guia completo em `DEPLOY.md`
+
+## 📝 Personalização
+
+### Informações Pessoais
+
+Edite os seguintes arquivos:
+
+- **Hero:** `src/components/Hero.tsx` - Nome, título, descrição
+- **About:** `src/components/About.tsx` - Sua história
+- **Projects:** `src/components/Projects.tsx` - Seus projetos
+- **Skills:** `src/components/Skills.tsx` - Suas habilidades
+- **Contact:** `src/components/Contact.tsx` - Informações de contato
+
+### Cores e Estilos
+
+Personalize em `src/app/globals.css`:
+- Variáveis CSS
+- Cores
+- Tipografia
+- Espaçamentos
+
+Veja o guia completo em `CUSTOMIZATION.md`
+
+## 📂 Estrutura do Projeto
+
+```
+portifolio_marlonbatalha/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx       # Layout principal + SEO
+│   │   ├── page.tsx         # Página inicial
+│   │   └── globals.css      # Design system
+│   └── components/
+│       ├── Header.tsx       # Navegação fixa
+│       ├── Hero.tsx         # Seção hero
+│       ├── About.tsx        # Sobre mim
+│       ├── Projects.tsx     # Projetos
+│       ├── Skills.tsx       # Habilidades
+│       ├── Contact.tsx      # Contato
+│       └── Footer.tsx       # Rodapé
+├── public/                  # Arquivos estáticos
+│   └── images/             # Suas imagens
+├── DEPLOY.md               # Guia de deploy
+├── CUSTOMIZATION.md        # Guia de personalização
+└── package.json
+```
+
+## 🎯 Seções do Portfólio
+
+### 1. Hero
+- Apresentação impactante
+- Call-to-action
+- Estatísticas (anos de experiência, projetos, etc.)
+- Background grid animado
+
+### 2. Sobre
+- Descrição profissional
+- Cards informativos
+- Animações ao scroll
+
+### 3. Projetos
+- Grid de projetos
+- Categorias
+- Stack tecnológica
+- Links para demo e código
+
+### 4. Habilidades
+- Categorias (Frontend, Backend, Ferramentas)
+- Barras de progresso animadas
+- Níveis de proficiência
+
+### 5. Contato
+- Formulário funcional
+- Informações de contato
+- Links de redes sociais
+
+## 🔧 Recursos Avançados
+
+### Framer Motion
+- Animações de entrada suaves
+- Scroll-triggered animations
+- Hover effects
+- Layout animations
+
+### Performance
+- Code splitting automático
+- Lazy loading
+- Otimização de imagens
+- CSS modular
+
+### SEO
+- Meta tags otimizadas
+- Open Graph
+- Structured data
+- Sitemap automático
+
+## 📱 Responsividade
+
+- **Desktop:** Layout em grid completo
+- **Tablet:** Grid adaptativo
+- **Mobile:** Layout em coluna única
+- **Breakpoints:** 480px, 768px, 968px
+
+## ✅ Checklist de Deploy
+
+- [ ] Personalizei minhas informações
+- [ ] Adicionei meus projetos
+- [ ] Atualizei habilidades
+- [ ] Configurei contato
+- [ ] Testei localmente
+- [ ] Build funcionando
+- [ ] Código no GitHub
+- [ ] Deploy na Vercel
+- [ ] Testado em mobile
+- [ ] SEO verificado
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+## 👤 Autor
+
+**Marlon Batalha**
+
+- Portfolio: [seu-portfolio.vercel.app](https://seu-portfolio.vercel.app)
+- LinkedIn: [seu-linkedin](https://linkedin.com)
+- GitHub: [@seu-usuario](https://github.com)
+
+---
+
+**Desenvolvido com ❤️ usando Next.js, React, TypeScript e Framer Motion**
