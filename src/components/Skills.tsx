@@ -180,18 +180,16 @@ export default function Skills() {
                       initial: { y: 0 },
                       hover: { 
                         y: -8,
+                        boxShadow: `0 0 0 1px ${tech.color}30, 0 8px 24px ${tech.color}20, 0 0 40px ${tech.color}15`,
                         transition: {
                           duration: 0.3,
-                          ease: [0.22, 1, 0.36, 1]
+                          ease: [0.22, 1, 0.36, 1] as const,
                         }
                       }
                     }}
                     style={{
                       background: `linear-gradient(135deg, ${tech.color}08 0%, ${tech.color}03 100%)`,
                       boxShadow: `0 0 0 1px ${tech.color}15, 0 4px 12px ${tech.color}10`,
-                    }}
-                    whileHover={{
-                      boxShadow: `0 0 0 1px ${tech.color}30, 0 8px 24px ${tech.color}20, 0 0 40px ${tech.color}15`,
                     }}
                   >
                     <motion.div 
