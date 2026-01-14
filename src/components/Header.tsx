@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
-import styles from './Header.module.css';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -48,33 +47,42 @@ export default function Header() {
 
   return (
     <motion.header
-      className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}
+      className={`fixed top-0 left-0 right-0 z-[1000] py-5 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-black/80 backdrop-blur-[20px] backdrop-saturate-[180%] py-3.5 border-b border-[var(--color-border-primary)]' 
+          : 'bg-transparent'
+      }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
-      <div className={styles.container}>
+      <div className="container flex justify-between items-center">
         <motion.div
-          className={styles.logo}
+          className="text-[1.75rem] font-bold cursor-pointer tracking-tight"
+          style={{ fontFamily: "var(--font-display)" }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <span className="gradient-text">MB</span>
         </motion.div>
         
-        <nav className={styles.nav}>
+        <nav className="flex gap-2 max-md:gap-0">
           {navItems.map((item) => (
             <motion.button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={activeSection === item.id ? styles.active : ''}
+              className={`relative text-[0.9375rem] font-medium cursor-pointer px-4 py-2.5 rounded-[var(--radius-md)] transition-all duration-300 tracking-[0.01em] max-md:text-sm max-md:px-3 max-md:py-2 ${
+                activeSection === item.id
+                  ? 'text-[var(--color-text-primary)]'
+                  : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-white/5'
+              }`}
               whileHover={{ y: -2 }}
               whileTap={{ y: 0 }}
             >
               {item.label}
               {activeSection === item.id && (
                 <motion.div
-                  className={styles.activeIndicator}
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[var(--color-accent-primary)]"
                   layoutId="activeIndicator"
                   transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                 />

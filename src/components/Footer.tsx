@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import styles from './Footer.module.css';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,45 +13,95 @@ export default function Footer() {
   };
 
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <div className={styles.brand}>
+    <footer className="bg-[var(--color-bg-secondary)] border-t border-[var(--color-border-primary)] py-[var(--spacing-3xl)] pb-[var(--spacing-xl)]">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-[var(--spacing-3xl)] mb-[var(--spacing-3xl)]">
+          <div>
             <motion.h3
-              className="gradient-text"
+              className="gradient-text text-[1.75rem] mb-2"
               whileHover={{ scale: 1.05 }}
             >
               Marlon Batalha
             </motion.h3>
-            <p>Desenvolvedor Full Stack</p>
-            <p className={styles.tagline}>
+            <p className="text-[var(--color-text-tertiary)] text-[0.9375rem] mb-1">Desenvolvedor Full Stack</p>
+            <p className="text-sm text-[var(--color-text-muted)] italic">
               Criando experiências digitais excepcionais
             </p>
           </div>
 
-          <div className={styles.links}>
-            <div className={styles.linkGroup}>
-              <h4>Navegação</h4>
-              <button onClick={() => scrollToSection('home')}>Início</button>
-              <button onClick={() => scrollToSection('about')}>Sobre</button>
-              <button onClick={() => scrollToSection('projects')}>Projetos</button>
-              <button onClick={() => scrollToSection('skills')}>Habilidades</button>
-              <button onClick={() => scrollToSection('contact')}>Contato</button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-xl)]">
+            <div>
+              <h4 className="text-base font-semibold mb-[var(--spacing-lg)] text-[var(--color-text-primary)]">Navegação</h4>
+              <button 
+                onClick={() => scrollToSection('home')}
+                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] bg-none border-none p-0 cursor-pointer text-left hover:text-[var(--color-accent-primary)] hover:translate-x-1"
+                style={{ fontFamily: "var(--font-primary)" }}
+              >
+                Início
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] bg-none border-none p-0 cursor-pointer text-left hover:text-[var(--color-accent-primary)] hover:translate-x-1"
+                style={{ fontFamily: "var(--font-primary)" }}
+              >
+                Sobre
+              </button>
+              <button 
+                onClick={() => scrollToSection('projects')}
+                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] bg-none border-none p-0 cursor-pointer text-left hover:text-[var(--color-accent-primary)] hover:translate-x-1"
+                style={{ fontFamily: "var(--font-primary)" }}
+              >
+                Projetos
+              </button>
+              <button 
+                onClick={() => scrollToSection('skills')}
+                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] bg-none border-none p-0 cursor-pointer text-left hover:text-[var(--color-accent-primary)] hover:translate-x-1"
+                style={{ fontFamily: "var(--font-primary)" }}
+              >
+                Habilidades
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] bg-none border-none p-0 cursor-pointer text-left hover:text-[var(--color-accent-primary)] hover:translate-x-1"
+                style={{ fontFamily: "var(--font-primary)" }}
+              >
+                Contato
+              </button>
             </div>
 
-            <div className={styles.linkGroup}>
-              <h4>Redes Sociais</h4>
-              <a href="#">LinkedIn</a>
-              <a href="#">GitHub</a>
-              <a href="#">Twitter</a>
-              <a href="#">Instagram</a>
+            <div>
+              <h4 className="text-base font-semibold mb-[var(--spacing-lg)] text-[var(--color-text-primary)]">Redes Sociais</h4>
+              <a 
+                href="#"
+                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] hover:text-[var(--color-accent-primary)] hover:translate-x-1"
+              >
+                LinkedIn
+              </a>
+              <a 
+                href="#"
+                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] hover:text-[var(--color-accent-primary)] hover:translate-x-1"
+              >
+                GitHub
+              </a>
+              <a 
+                href="#"
+                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] hover:text-[var(--color-accent-primary)] hover:translate-x-1"
+              >
+                Twitter
+              </a>
+              <a 
+                href="#"
+                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] hover:text-[var(--color-accent-primary)] hover:translate-x-1"
+              >
+                Instagram
+              </a>
             </div>
           </div>
         </div>
 
-        <div className={styles.bottom}>
-          <p>&copy; {currentYear} Marlon Batalha. Todos os direitos reservados.</p>
-          <p>Desenvolvido com Next.js & Framer Motion</p>
+        <div className="pt-[var(--spacing-xl)] border-t border-[var(--color-border-secondary)] flex justify-between items-center flex-wrap gap-[var(--spacing-lg)] max-md:flex-col max-md:text-center">
+          <p className="text-[var(--color-text-muted)] text-sm m-0">&copy; {currentYear} Marlon Batalha. Todos os direitos reservados.</p>
+          <p className="text-[var(--color-text-muted)] text-sm m-0">Desenvolvido com Next.js & Framer Motion</p>
         </div>
       </div>
     </footer>
