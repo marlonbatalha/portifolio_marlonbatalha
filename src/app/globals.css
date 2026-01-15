@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Fonts */
+@font-face {
+  font-family: 'FHWASeriesF2020plus50'; /* alterado de 'Route-26' para 'THE_RETRO_FONT' */
+  src: url('/fonts/FHWASeriesF2020plus50.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Custom CSS Variables */
 :root {
   /* Spacing */
@@ -27,7 +36,7 @@
   
   /* Fonts */
   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-family-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-display: '', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-primary: var(--font-family-primary);
   --font-display: var(--font-family-display);
 

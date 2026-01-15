@@ -123,8 +123,8 @@ export default function About() {
                 transition={{ delay: 0.7, duration: 0.5 }}
               >
                 {[
-                  { number: '3+', label: 'Anos de Experiência' },
-                  { number: '20+', label: 'Projetos Concluídos' },
+                  { number: '1,5+', label: 'Anos de Experiência' },
+                  { number: '10+', label: 'Projetos Concluídos' },
                   { number: '100%', label: 'Satisfação' },
                 ].map((stat, index) => (
                   <motion.div

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import  AnimatedText  from '../ui/AnimatedText'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,10 +19,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-[var(--spacing-3xl)] mb-[var(--spacing-3xl)]">
           <div>
             <motion.h3
-              className="gradient-text text-[1.75rem] mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              Marlon Batalha
+              className="text-[2rem] mb-2">
+              <AnimatedText text="Marlon Batalha"  />
             </motion.h3>
             <p className="text-[var(--color-text-tertiary)] text-[0.9375rem] mb-1">Desenvolvedor Full Stack</p>
             <p className="text-sm text-[var(--color-text-muted)] italic">
@@ -78,19 +77,13 @@ export default function Footer() {
                 LinkedIn
               </a>
               <a 
-                href="#"
+                href="https://github.com/marlonbatalha"
                 className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] hover:text-[var(--color-accent-primary)] hover:translate-x-1"
               >
                 GitHub
               </a>
               <a 
-                href="#"
-                className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] hover:text-[var(--color-accent-primary)] hover:translate-x-1"
-              >
-                Twitter
-              </a>
-              <a 
-                href="#"
+                href="https://www.instagram.com/marlonbatalha06"
                 className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] hover:text-[var(--color-accent-primary)] hover:translate-x-1"
               >
                 Instagram

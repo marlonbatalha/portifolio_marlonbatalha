@@ -63,7 +63,7 @@ export default function Header() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="gradient-text">MB</span>
+          <span className="gradient-text">Dev Full Stack</span>
         </motion.div>
         
         <nav className="flex gap-2 max-md:gap-0">

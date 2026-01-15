@@ -39,7 +39,7 @@ const techColors: { [key: string]: string } = {
   'Next.js': '#FFFFFF',
   'TypeScript': '#3178C6',
   'PostgreSQL': '#4169E1',
-  'Vercel': '#000000',
+  'Vercel': '#ffffff',
   'React': '#61DAFB',
   'Node.js': '#339933',
   'MongoDB': '#47A248',
@@ -47,7 +47,7 @@ const techColors: { [key: string]: string } = {
   'D3.js': '#F9A03C',
   'Firebase': '#FFCA28',
   'Vue.js': '#42B883',
-  'Express': '#000000',
+  'Express': '#00FFFF',
   'MySQL': '#4479A1',
 };
 
