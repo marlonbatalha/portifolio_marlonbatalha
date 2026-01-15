@@ -71,7 +71,7 @@ export default function Footer() {
             <div>
               <h4 className="text-base font-semibold mb-[var(--spacing-lg)] text-[var(--color-text-primary)]">Redes Sociais</h4>
               <a 
-                href="#"
+                href="https://www.linkedin.com/in/marlon-batalha-3323a724b/"
                 className="block text-[var(--color-text-tertiary)] mb-2 transition-all duration-300 text-[0.9375rem] hover:text-[var(--color-accent-primary)] hover:translate-x-1"
               >
                 LinkedIn
