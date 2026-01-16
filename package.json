@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^12.26.2",
+    "motion": "^12.26.2",
     "next": "16.1.1",
     "pnpm": "^10.28.0",
     "react": "19.2.3",
